@@ -2,7 +2,7 @@ name: Auto Sync Upstream (documentary)
 
 on:
   schedule:
-    - cron: '*/30 * * * *'
+    - cron: '12,42 * * * *'
   workflow_dispatch:
 
 permissions:
