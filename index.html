@@ -1,0 +1,104 @@
+<!DOCTYPE html><html lang="zh-CN"><head><style>a[href*="signin-with-chatgpt"]{display:none!important}</style><script id="jintai-doc-shim">(function(){
+var BASE=new URL('.',location.href).pathname;
+if(BASE.slice(-1)!=='/')BASE+='/';
+window.__JT_BASE__=BASE;
+var IS_GH=/github\.io$/i.test(location.hostname||'');
+var CDNS=['https://testingcf.jsdelivr.net/gh/aikingtai-ctrl/documentary-classroom-library@main/','https://gcore.jsdelivr.net/gh/aikingtai-ctrl/documentary-classroom-library@main/'];
+document.addEventListener('click',function(ev){
+  var a=ev.target&&ev.target.closest?ev.target.closest('a'):null;
+  if(!a)return;
+  var hr=a.getAttribute('href')||'';
+  if(hr.indexOf('signin-with-chatgpt')!==-1){ev.preventDefault();return;}
+  if(hr==='/collection-workflow.md'||hr==='/reconciliation-template.csv'){
+    a.setAttribute('href',BASE+hr.slice(1));
+  }
+},true);
+var _dbPromise=null;
+var origFetch=window.fetch.bind(window);
+function getDocDB(){
+  if(_dbPromise)return _dbPromise;
+  var urls=IS_GH?[CDNS[0]+'data/library_full.json',CDNS[1]+'data/library_full.json',BASE+'data/library_full.json']:[BASE+'data/library_full.json',CDNS[0]+'data/library_full.json'];
+  _dbPromise=(async function(){
+    for(var i=0;i<urls.length;i++){
+      try{
+        var r=await origFetch(urls[i]);
+        if(r.ok){
+          var d=await r.json();
+          (d.films||[]).forEach(function(f){
+            var parts=[f.id,f.title,f.originalTitle,(f.aliases||[]).join(' '),f.year,f.country,f.director,f.region,f.period,f.topic,f.method,f.form,f.summary,f.teaching,f.research,(f.courses||[]).join(' '),(f.knowledge||[]).join(' ')];
+            f._q=parts.filter(Boolean).join(' ').toLowerCase();
+            var ym=String(f.year||'').match(/\d{4}/);
+            f._yr=ym?parseInt(ym[0],10):9999;
+            f._dec=ym?String(Math.floor(parseInt(ym[0],10)/10)*10):'';
+          });
+          return d;
+        }
+      }catch(e){}
+    }
+    return {stats:{total:1841,published:0,pending:1163,formal:null},target:20000,countedAt:'',facets:{region:[],topic:[],decades:[]},films:[]};
+  })();
+  return _dbPromise;
+}
+window.fetch=async function(input,init){
+  var urlStr=typeof input==='string'?input:(input&&input.url?input.url:String(input));
+  var u;
+  try{u=new URL(urlStr,location.origin);}catch(e){return origFetch(input,init);}
+  if(u.pathname.indexOf('/api/library')!==-1){
+    var method=((init&&init.method)||(input&&input.method)||'GET').toUpperCase();
+    if(method!=='GET'){
+      return new Response(JSON.stringify({error:'当前为国内直连教学只读节点，全库 678 部已发布纪录片课程档案均可完整查阅。'}),{status:400,headers:{'Content-Type':'application/json;charset=utf-8'}});
+    }
+    var db=await getDocDB();
+    if(u.searchParams.get('export')==='1'){
+      return new Response(JSON.stringify(db),{status:200,headers:{'Content-Type':'application/json;charset=utf-8'}});
+    }
+    var fid=u.searchParams.get('id');
+    if(fid){
+      var found=(db.films||[]).find(function(x){return String(x.id)===String(fid);});
+      if(found)return new Response(JSON.stringify({film:found}),{status:200,headers:{'Content-Type':'application/json;charset=utf-8'}});
+      return new Response(JSON.stringify({error:'未找到该影片记录'}),{status:404,headers:{'Content-Type':'application/json;charset=utf-8'}});
+    }
+    var q=(u.searchParams.get('q')||'').trim().toLowerCase();
+    var terms=q?q.split(/\s+/).filter(Boolean):[];
+    var dec=u.searchParams.get('decade')||'';
+    var reg=u.searchParams.get('region')||'';
+    var top=u.searchParams.get('topic')||'';
+    var sort=u.searchParams.get('sort')||'year';
+    var page=Math.max(1,parseInt(u.searchParams.get('page')||'1',10)||1);
+    var pageSize=24;
+    var list=(db.films||[]).filter(function(f){
+      if(dec&&f._dec!==dec)return false;
+      if(reg&&f.region!==reg)return false;
+      if(top&&f.topic!==top)return false;
+      if(terms.length){
+        for(var i=0;i<terms.length;i++){if(f._q.indexOf(terms[i])===-1)return false;}
+      }
+      return true;
+    });
+    list=list.slice();
+    if(sort==='title'){
+      list.sort(function(a,b){return (a.title||'').localeCompare(b.title||'','zh-CN');});
+    }else{
+      list.sort(function(a,b){return (a._order-b._order);});
+    }
+    var total=list.length;
+    var pages=Math.max(1,Math.ceil(total/pageSize));
+    if(page>pages)page=pages;
+    var slice=list.slice((page-1)*pageSize,page*pageSize);
+    var resp={
+      user:null,
+      films:slice,
+      stats:db.stats,
+      target:db.target,
+      countedAt:db.countedAt,
+      facets:db.facets,
+      pagination:{page:page,pageSize:pageSize,total:total,pages:pages}
+    };
+    return new Response(JSON.stringify(resp),{status:200,headers:{'Content-Type':'application/json;charset=utf-8'}});
+  }
+  return origFetch(input,init);
+};
+})();</script><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="stylesheet" href="./_next/static/css/index.BjLI9fKX.css" data-rsc-css-href="./_next/static/css/index.BjLI9fKX.css" data-precedence="vite-rsc/importer-resources"/><link rel="modulepreload" fetchPriority="low" href="./_next/static/chunks/index-Dvj797VA.js"/><script src="./_next/static/chunks/rolldown-runtime-C60lm6uB.js" type="module" async=""></script><script src="./_next/static/chunks/framework-D_rUT4EX.js" type="module" async=""></script><link rel="modulepreload" href="./_next/static/chunks/layout-segment-context-XOPi1Ben.js" crossorigin=""/><link rel="modulepreload" href="./_next/static/chunks/library-client-7k0YkTX5.js" crossorigin=""/><title>纪录片教学资源库 · 以真实，启发课堂</title><meta name="description" content="中外纪录片教学资源，按年代、地区与主题检索。老师共同维护审核，学生自由浏览已发布片目。"/><link rel="shortcut icon" href="./favicon.svg"/><link rel="icon" href="./favicon.svg"/><script>Object.assign(((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}),{params:{},nav:{"pathname":"/","searchParams":[]}})</script><link rel="modulepreload" href="./_next/static/chunks/index-Dvj797VA.js" />
+</head><body class="antialiased"><div class="app-shell"><header class="topbar"><a class="brand" href="/"><span class="brand-icon">▥</span><span>纪录片教学资源库<small>DOCUMENTARY CLASSROOM</small></span></a><nav aria-label="主导航"><button class="nav-active">探索片库</button></nav><div class="account"><a class="login" href="/signin-with-chatgpt?return_to=%2F" target="_top">教师登录 <span>↗</span></a></div></header><main><section class="hero"><div><div class="eyebrow">真实的影像 · 开放的课堂</div><h1>以真实，
+启发课堂。</h1><p>跨越年代与地域，发现值得观看、讨论与研究的纪录片。
+从一部作品开始，连接影像与知识。</p></div><div class="hero-index"><span class="index-label">建设目标 · 规划容量</span><strong>20,000<small> 部</small></strong><div class="index-line"></div><span>逐批采集、核查与入藏</span><p class="sub-stat">目标容量不计入当前馆藏数量</p><span class="index-stamp">教学 · 研究 · 发现</span></div></section><section class="count-board" aria-label="片库数量与状态"><div><span>当前可见数量</span><strong>—<small> 部</small></strong><p>网站已发布片目，可检索与浏览</p></div><div><span>待复核数量</span><strong>—<small> 条</small></strong><p>待审核稿，核实后决定是否发布</p></div><div><span>正式馆藏数量</span><strong class="unconfirmed">待核定</strong><p>须以工作簿和校内入藏确认记录为准</p></div></section><details class="count-explanation"><summary>统计口径与入藏流程 <span>当前登记 <!-- -->—<!-- --> 条</span></summary><p>目标容量、网站发布、待审核与正式入藏分别统计。修改已发布作品后，待审核稿与可见版本可能同时存在，两项数量不能直接相加。网站发布状态不代表已完成校内入藏或取得播放授权。</p><p>首批30部工作簿须先按作品编号、原片名、年份和导演与网站逐条对照，确认重复与版本关系，再进入复核。本页尚未接入正式入藏台账，因此“待核定”不表示0部。</p><ol><li>确认原始编号、来源和采集批次，保留待核字段。</li><li>初核基本信息、奖项和出处；由另一位复核人处理分歧。</li><li>保存待审核稿，审核后发布目录；教学建议须经看片核实。</li><li>校内负责人确认入藏，登记入藏编号、日期和依据，再纳入正式统计。</li><li>具体版本、片段时间码、可观看范围与授权另行核实。</li></ol><p>统计读取时间：<!-- -->正在读取<!-- -->（北京时间）</p><a href="./collection-workflow.md" download="">下载复核与入藏流程 ↗</a> · <a href="./reconciliation-template.csv" download="">下载首批30部对照模板 ↗</a></details><div class="workspace"><aside class="sidebar"><div class="aside-heading">馆藏导航 <span>INDEX</span></div><button class="side-link active">全部片目 <span>0</span></button><label>年代<select><option value="" selected="">全部年代</option></select></label><label>国家／地区分组<select><option value="" selected="">全部地区</option></select></label><label>题材<select><option value="" selected="">全部题材</option></select></label><div class="aside-note"><span>使用说明</span><p>片库提供片目与来源索引。公开链接、目录发布和教学播放授权需分别核实。</p></div></aside><section class="catalog" aria-label="片目列表"><div class="catalog-tools"><label class="search"><span>⌕</span><input aria-label="检索片库" placeholder="搜索片名、导演、课程或知识点…" value=""/></label></div><div class="results-heading"><h2>探索片目<!-- --> <span>0<!-- --> 部</span></h2><label>排序 <select aria-label="排序"><option value="year" selected="">年代从早到晚</option><option value="title">按片名</option></select></label></div><div class="empty">正在读取片库…</div></section></div></main><footer><span>纪录片教学资源库</span><span>让影像走进课堂，让问题走向世界。</span><span>分批采集 · 逐条复核 · 按据入藏</span></footer></div><script type="module" src="./_next/static/chunks/index-Dvj797VA.js" id="_R_" async=""></script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("0:{\"page:/\":\"$L1\",\"layout:/\":\"$L2\",\"route:/\":\"$L3\",\"__route\":\"route:/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"__bfcacheSegmentIdentities\":{\"layout:/\":\"[\\\"layout\\\",\\\"layout:/\\\",\\\"root-boundary:/\\\",\\\"\\\"]\",\"page:/\":\"[\\\"page\\\",\\\"page:/\\\",\\\"root-boundary:/\\\",\\\"\\\"]\"},\"__srcPage\":[\"page\"],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:1177fd80f83fa7b0\",\"deploymentVersion\":\"70034a4e-a3b2-4e7f-a677-29d820767738\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null},\"__dynamicStaleTime\":0}\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("4:I[\"8c0f216c4604\",[],\"Children\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("5:I[\"593f344dc510\",[],\"GlobalErrorBoundary\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("6:I[\"0b874ad30386\",[],\"default\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("7:I[\"593f344dc510\",[],\"ErrorBoundary\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("8:I[\"15c18cfaeeff\",[],\"LayoutSegmentProvider\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("9:I[\"8c0f216c4604\",[],\"Slot\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("a:I[\"593f344dc510\",[],\"NotFoundBoundary\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("b:I[\"9276801271d6\",[],\"AppRouterScrollTarget\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("c:I[\"593f344dc510\",[],\"RedirectBoundary\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push(":HL[\"./_next/static/css/index.BjLI9fKX.css\",\"style\"     ]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("2:[[[\"$\",\"link\",\"css:/_next/static/css/index.BjLI9fKX.css\",{\"rel\":\"stylesheet\",\"precedence\":\"vite-rsc/importer-resources\",\"href\":\"./_next/static/css/index.BjLI9fKX.css\",\"data-rsc-css-href\":\"./_next/static/css/index.BjLI9fKX.css\"}],\"$undefined\"],[\"$\",\"html\",null,{\"lang\":\"zh-CN\",\"children\":[\"$\",\"body\",null,{\"className\":\"antialiased\",\"children\":[\"$\",\"$L4\",null,{}]}]}]]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("3:[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"纪录片教学资源库 · 以真实，启发课堂\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"中外纪录片教学资源，按年代、地区与主题检索。老师共同维护审核，学生自由浏览已发布片目。\"}],[\"$\",\"link\",\"2\",{\"data-vinext-streamed-icon\":\"$undefined\",\"rel\":\"shortcut icon\",\"href\":\"/favicon.svg\",\"type\":\"$undefined\",\"sizes\":\"$undefined\",\"color\":\"$undefined\",\"media\":\"$undefined\",\"fetchPriority\":\"$undefined\"}],[\"$\",\"link\",\"3\",{\"data-vinext-streamed-icon\":\"$undefined\",\"rel\":\"icon\",\"href\":\"/favicon.svg\",\"type\":\"$undefined\",\"sizes\":\"$undefined\",\"color\":\"$undefined\",\"media\":\"$undefined\",\"fetchPriority\":\"$undefined\"}]],[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}]]],[\"$\",\"$L5\",null,{\"fallback\":\"$6\",\"children\":[\"$\",\"$L7\",null,{\"fallback\":\"$6\",\"children\":[\"$\",\"$L8\",null,{\"providerId\":\"layout:/\",\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L9\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$La\",null,{\"resetKey\":\"\",\"fallback\":[[\"$\",\"title\",null,{\"children\":\"404: This page could not be found.\"}],[\"$\",\"div\",null,{\"style\":{\"fontFamily\":\"system-ui,\\\"Segoe UI\\\",Roboto,Helvetica,Arial,sans-serif,\\\"Apple Color Emoji\\\",\\\"Segoe UI Emoji\\\"\",\"height\":\"100vh\",\"textAlign\":\"center\",\"display\":\"flex\",\"flexDirection\":\"column\",\"alignItems\":\"center\",\"justifyContent\":\"center\"},\"children\":[\"$\",\"div\",null,{\"children\":[[\"$\",\"style\",null,{\"dangerouslySetInnerHTML\":{\"__html\":\"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}\"}}],[\"$\",\"h1\",null,{\"className\":\"next-error-h1\",\"style\":{\"display\":\"inline-block\",\"margin\":\"0 20px 0 0\",\"padding\":\"0 23px 0 0\",\"fontSize\":24,\"fontWeight\":500,\"verticalAlign\":\"top\",\"lineHeight\":\"49px\"},\"children\":404}],[\"$\",\"div\",null,{\"style\":{\"display\":\"inline-block\"},\"children\":[\"$\",\"h2\",null,{\"style\":{\"fontSize\":14,\"fontWeight\":400,\"lineHeight\":\"49px\",\"margin\":0},\"children\":\"This page could not be found.\"}]}]]}]}]],\"children\":[\"$\",\"$Lb\",null,{\"children\":[\"$\",\"$Lc\",null,{\"children\":[[\"$\",\"$L8\",null,{\"providerId\":\"page:/\",\"segmentMap\":{\"children\":[\"__PAGE__\"]},\"children\":[\"$\",\"$L9\",null,{\"id\":\"page:/\"}]}],null]}]}]}]}]}]}]}],null,null]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("d:I[\"25dd79c79ed8\",[],\"default\",1]\n")</script><script>((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).rsc.push("1:[\"$\",\"$Ld\",null,{}]\n")</script><script>Object.assign(((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}),{"initialCacheKind":"dynamic","dynamicStaleTimeSeconds":0});((self[Symbol.for("vinext.navigationRuntime")]??={bootstrap:{routeManifest:null},functions:{}}).bootstrap.rsc??={rsc:[]}).done=true</script><script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a5276e61fcb77d34',t:'MTc5MzMzMTk2OA=='};var l=window.parent.location,o;try{o=new URL(l.origin).origin}catch(e){try{o=new URL(new URL(l.href).origin).origin}catch(e){o=''}}var u='/cdn-cgi/challenge-platform/scripts/jsd/main.js?ray=a5276e61fcb77d34',a=document.createElement('script');a.src=o?new URL(u,o).href:u;document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
