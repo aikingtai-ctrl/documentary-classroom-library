@@ -1,0 +1,1835 @@
+{
+  "stats": {
+    "total": 40191,
+    "published": 20533,
+    "pending": 19632,
+    "formal": null
+  },
+  "facets": {
+    "country": [
+      {
+        "value": "美国",
+        "label": "美国",
+        "count": 4048
+      },
+      {
+        "value": "丹麦",
+        "label": "丹麦",
+        "count": 2261
+      },
+      {
+        "value": "荷兰",
+        "label": "荷兰",
+        "count": 1777
+      },
+      {
+        "value": "德国",
+        "label": "德国",
+        "count": 1772
+      },
+      {
+        "value": "法国",
+        "label": "法国",
+        "count": 1746
+      },
+      {
+        "value": "加拿大",
+        "label": "加拿大",
+        "count": 911
+      },
+      {
+        "value": "英国",
+        "label": "英国",
+        "count": 898
+      },
+      {
+        "value": "意大利",
+        "label": "意大利",
+        "count": 583
+      },
+      {
+        "value": "瑞士",
+        "label": "瑞士",
+        "count": 565
+      },
+      {
+        "value": "瑞典",
+        "label": "瑞典",
+        "count": 482
+      },
+      {
+        "value": "西班牙",
+        "label": "西班牙",
+        "count": 412
+      },
+      {
+        "value": "波兰",
+        "label": "波兰",
+        "count": 397
+      },
+      {
+        "value": "巴西",
+        "label": "巴西",
+        "count": 342
+      },
+      {
+        "value": "日本",
+        "label": "日本",
+        "count": 332
+      },
+      {
+        "value": "俄罗斯",
+        "label": "俄罗斯",
+        "count": 291
+      },
+      {
+        "value": "以色列",
+        "label": "以色列",
+        "count": 273
+      },
+      {
+        "value": "比利时",
+        "label": "比利时",
+        "count": 267
+      },
+      {
+        "value": "芬兰",
+        "label": "芬兰",
+        "count": 266
+      },
+      {
+        "value": "阿根廷",
+        "label": "阿根廷",
+        "count": 262
+      },
+      {
+        "value": "澳大利亚",
+        "label": "澳大利亚",
+        "count": 253
+      },
+      {
+        "value": "奥地利",
+        "label": "奥地利",
+        "count": 240
+      },
+      {
+        "value": "England",
+        "label": "England",
+        "count": 236
+      },
+      {
+        "value": "印度",
+        "label": "印度",
+        "count": 230
+      },
+      {
+        "value": "中国",
+        "label": "中国",
+        "count": 224
+      },
+      {
+        "value": "挪威",
+        "label": "挪威",
+        "count": 213
+      },
+      {
+        "value": "Belgium",
+        "label": "Belgium",
+        "count": 175
+      },
+      {
+        "value": "葡萄牙",
+        "label": "葡萄牙",
+        "count": 167
+      },
+      {
+        "value": "Soviet Union",
+        "label": "Soviet Union",
+        "count": 150
+      },
+      {
+        "value": "伊朗",
+        "label": "伊朗",
+        "count": 114
+      },
+      {
+        "value": "中国台湾",
+        "label": "中国台湾",
+        "count": 114
+      },
+      {
+        "value": "古巴",
+        "label": "古巴",
+        "count": 113
+      },
+      {
+        "value": "Czech Republic",
+        "label": "Czech Republic",
+        "count": 95
+      },
+      {
+        "value": "爱沙尼亚",
+        "label": "爱沙尼亚",
+        "count": 91
+      },
+      {
+        "value": "罗马尼亚",
+        "label": "罗马尼亚",
+        "count": 91
+      },
+      {
+        "value": "墨西哥",
+        "label": "墨西哥",
+        "count": 85
+      },
+      {
+        "value": "南非",
+        "label": "南非",
+        "count": 74
+      },
+      {
+        "value": "Mexico",
+        "label": "Mexico",
+        "count": 72
+      },
+      {
+        "value": "Iran",
+        "label": "Iran",
+        "count": 68
+      },
+      {
+        "value": "韩国",
+        "label": "韩国",
+        "count": 66
+      },
+      {
+        "value": "智利",
+        "label": "智利",
+        "count": 62
+      },
+      {
+        "value": "Ukraine",
+        "label": "Ukraine",
+        "count": 57
+      },
+      {
+        "value": "立陶宛",
+        "label": "立陶宛",
+        "count": 55
+      },
+      {
+        "value": "Serbia",
+        "label": "Serbia",
+        "count": 55
+      },
+      {
+        "value": "East Germany",
+        "label": "East Germany",
+        "count": 54
+      },
+      {
+        "value": "捷克",
+        "label": "捷克",
+        "count": 53
+      },
+      {
+        "value": "Hungary",
+        "label": "Hungary",
+        "count": 52
+      },
+      {
+        "value": "Qatar",
+        "label": "Qatar",
+        "count": 49
+      },
+      {
+        "value": "乌克兰",
+        "label": "乌克兰",
+        "count": 48
+      },
+      {
+        "value": "中国大陆",
+        "label": "中国大陆",
+        "count": 48
+      },
+      {
+        "value": "Lebanon",
+        "label": "Lebanon",
+        "count": 48
+      },
+      {
+        "value": "Latvia",
+        "label": "Latvia",
+        "count": 47
+      },
+      {
+        "value": "South Korea",
+        "label": "South Korea",
+        "count": 47
+      },
+      {
+        "value": "哥伦比亚",
+        "label": "哥伦比亚",
+        "count": 46
+      },
+      {
+        "value": "South Africa",
+        "label": "South Africa",
+        "count": 45
+      },
+      {
+        "value": "黎巴嫩",
+        "label": "黎巴嫩",
+        "count": 44
+      },
+      {
+        "value": "卡塔尔",
+        "label": "卡塔尔",
+        "count": 43
+      },
+      {
+        "value": "中国香港",
+        "label": "中国香港",
+        "count": 43
+      },
+      {
+        "value": "Turkey",
+        "label": "Turkey",
+        "count": 40
+      },
+      {
+        "value": "Azerbaijan",
+        "label": "Azerbaijan",
+        "count": 38
+      },
+      {
+        "value": "东德",
+        "label": "东德",
+        "count": 36
+      },
+      {
+        "value": "Bulgaria",
+        "label": "Bulgaria",
+        "count": 36
+      },
+      {
+        "value": "Chile",
+        "label": "Chile",
+        "count": 36
+      },
+      {
+        "value": "Luxembourg",
+        "label": "Luxembourg",
+        "count": 36
+      },
+      {
+        "value": "土耳其",
+        "label": "土耳其",
+        "count": 34
+      },
+      {
+        "value": "Croatia",
+        "label": "Croatia",
+        "count": 34
+      },
+      {
+        "value": "Greece",
+        "label": "Greece",
+        "count": 34
+      },
+      {
+        "value": "民主德国（东德）",
+        "label": "民主德国（东德）",
+        "count": 33
+      },
+      {
+        "value": "匈牙利",
+        "label": "匈牙利",
+        "count": 33
+      },
+      {
+        "value": "Colombia",
+        "label": "Colombia",
+        "count": 33
+      },
+      {
+        "value": "Uruguay",
+        "label": "Uruguay",
+        "count": 33
+      },
+      {
+        "value": "Ireland",
+        "label": "Ireland",
+        "count": 31
+      },
+      {
+        "value": "Palestine",
+        "label": "Palestine",
+        "count": 29
+      },
+      {
+        "value": "People's Republic of China",
+        "label": "People's Republic of China",
+        "count": 27
+      },
+      {
+        "value": "Syria",
+        "label": "Syria",
+        "count": 27
+      },
+      {
+        "value": "Egypt",
+        "label": "Egypt",
+        "count": 26
+      },
+      {
+        "value": "爱尔兰",
+        "label": "爱尔兰",
+        "count": 22
+      },
+      {
+        "value": "叙利亚",
+        "label": "叙利亚",
+        "count": 22
+      },
+      {
+        "value": "Peru",
+        "label": "Peru",
+        "count": 22
+      },
+      {
+        "value": "Philippines",
+        "label": "Philippines",
+        "count": 22
+      },
+      {
+        "value": "埃及",
+        "label": "埃及",
+        "count": 21
+      },
+      {
+        "value": "New Zealand",
+        "label": "New Zealand",
+        "count": 21
+      },
+      {
+        "value": "巴勒斯坦",
+        "label": "巴勒斯坦",
+        "count": 20
+      },
+      {
+        "value": "菲律宾",
+        "label": "菲律宾",
+        "count": 20
+      },
+      {
+        "value": "希腊",
+        "label": "希腊",
+        "count": 20
+      },
+      {
+        "value": "印度尼西亚",
+        "label": "印度尼西亚",
+        "count": 20
+      },
+      {
+        "value": "Belarus",
+        "label": "Belarus",
+        "count": 20
+      },
+      {
+        "value": "Slovakia",
+        "label": "Slovakia",
+        "count": 20
+      },
+      {
+        "value": "Venezuela",
+        "label": "Venezuela",
+        "count": 20
+      },
+      {
+        "value": "Bosnia-Herzegovina",
+        "label": "Bosnia-Herzegovina",
+        "count": 19
+      },
+      {
+        "value": "China",
+        "label": "China",
+        "count": 19
+      },
+      {
+        "value": "Georgia",
+        "label": "Georgia",
+        "count": 19
+      },
+      {
+        "value": "Slovenia",
+        "label": "Slovenia",
+        "count": 19
+      },
+      {
+        "value": "Yugoslavia",
+        "label": "Yugoslavia",
+        "count": 19
+      },
+      {
+        "value": "Iceland",
+        "label": "Iceland",
+        "count": 18
+      },
+      {
+        "value": "Indonesia",
+        "label": "Indonesia",
+        "count": 18
+      },
+      {
+        "value": "Kazakhstan",
+        "label": "Kazakhstan",
+        "count": 18
+      },
+      {
+        "value": "Pakistan",
+        "label": "Pakistan",
+        "count": 18
+      },
+      {
+        "value": "Senegal",
+        "label": "Senegal",
+        "count": 18
+      },
+      {
+        "value": "格鲁吉亚",
+        "label": "格鲁吉亚",
+        "count": 17
+      },
+      {
+        "value": "秘鲁",
+        "label": "秘鲁",
+        "count": 17
+      },
+      {
+        "value": "Ecuador",
+        "label": "Ecuador",
+        "count": 17
+      },
+      {
+        "value": "Thailand",
+        "label": "Thailand",
+        "count": 17
+      },
+      {
+        "value": "泰国",
+        "label": "泰国",
+        "count": 16
+      },
+      {
+        "value": "Cambodia",
+        "label": "Cambodia",
+        "count": 16
+      },
+      {
+        "value": "Morocco",
+        "label": "Morocco",
+        "count": 16
+      },
+      {
+        "value": "斯洛伐克",
+        "label": "斯洛伐克",
+        "count": 15
+      },
+      {
+        "value": "Burkina Faso",
+        "label": "Burkina Faso",
+        "count": 15
+      },
+      {
+        "value": "新加坡",
+        "label": "新加坡",
+        "count": 14
+      },
+      {
+        "value": "Hong Kong",
+        "label": "Hong Kong",
+        "count": 14
+      },
+      {
+        "value": "Scotland",
+        "label": "Scotland",
+        "count": 14
+      },
+      {
+        "value": "Taiwan",
+        "label": "Taiwan",
+        "count": 14
+      },
+      {
+        "value": "克罗地亚",
+        "label": "克罗地亚",
+        "count": 13
+      },
+      {
+        "value": "塞尔维亚",
+        "label": "塞尔维亚",
+        "count": 13
+      },
+      {
+        "value": "新西兰",
+        "label": "新西兰",
+        "count": 13
+      },
+      {
+        "value": "Afghanistan",
+        "label": "Afghanistan",
+        "count": 13
+      },
+      {
+        "value": "Armenia",
+        "label": "Armenia",
+        "count": 13
+      },
+      {
+        "value": "Czechoslovakia",
+        "label": "Czechoslovakia",
+        "count": 13
+      },
+      {
+        "value": "Dominican Republic",
+        "label": "Dominican Republic",
+        "count": 13
+      },
+      {
+        "value": "United Arab Emirates",
+        "label": "United Arab Emirates",
+        "count": 13
+      },
+      {
+        "value": "拉脱维亚",
+        "label": "拉脱维亚",
+        "count": 12
+      },
+      {
+        "value": "缅甸",
+        "label": "缅甸",
+        "count": 12
+      },
+      {
+        "value": "摩洛哥",
+        "label": "摩洛哥",
+        "count": 12
+      },
+      {
+        "value": "Azerbaijan Soviet Socialist Republic",
+        "label": "Azerbaijan Soviet Socialist Republic",
+        "count": 12
+      },
+      {
+        "value": "Bangladesh",
+        "label": "Bangladesh",
+        "count": 12
+      },
+      {
+        "value": "Kenya",
+        "label": "Kenya",
+        "count": 12
+      },
+      {
+        "value": "联邦德国（西德）",
+        "label": "联邦德国（西德）",
+        "count": 11
+      },
+      {
+        "value": "突尼斯",
+        "label": "突尼斯",
+        "count": 11
+      },
+      {
+        "value": "亚美尼亚",
+        "label": "亚美尼亚",
+        "count": 11
+      },
+      {
+        "value": "Algeria",
+        "label": "Algeria",
+        "count": 11
+      },
+      {
+        "value": "Iraq",
+        "label": "Iraq",
+        "count": 11
+      },
+      {
+        "value": "阿尔及利亚",
+        "label": "阿尔及利亚",
+        "count": 10
+      },
+      {
+        "value": "越南",
+        "label": "越南",
+        "count": 10
+      },
+      {
+        "value": "Malaysia",
+        "label": "Malaysia",
+        "count": 10
+      },
+      {
+        "value": "Suriname",
+        "label": "Suriname",
+        "count": 10
+      },
+      {
+        "value": "The",
+        "label": "The",
+        "count": 10
+      },
+      {
+        "value": "布基纳法索",
+        "label": "布基纳法索",
+        "count": 9
+      },
+      {
+        "value": "刚果民主共和国",
+        "label": "刚果民主共和国",
+        "count": 9
+      },
+      {
+        "value": "Albania",
+        "label": "Albania",
+        "count": 9
+      },
+      {
+        "value": "Jordan",
+        "label": "Jordan",
+        "count": 9
+      },
+      {
+        "value": "Montenegro",
+        "label": "Montenegro",
+        "count": 9
+      },
+      {
+        "value": "Nepal",
+        "label": "Nepal",
+        "count": 9
+      },
+      {
+        "value": "Panama",
+        "label": "Panama",
+        "count": 9
+      },
+      {
+        "value": "Vietnam",
+        "label": "Vietnam",
+        "count": 9
+      },
+      {
+        "value": "Zimbabwe",
+        "label": "Zimbabwe",
+        "count": 9
+      },
+      {
+        "value": "冰岛",
+        "label": "冰岛",
+        "count": 8
+      },
+      {
+        "value": "肯尼亚",
+        "label": "肯尼亚",
+        "count": 8
+      },
+      {
+        "value": "塞内加尔",
+        "label": "塞内加尔",
+        "count": 8
+      },
+      {
+        "value": "西德",
+        "label": "西德",
+        "count": 8
+      },
+      {
+        "value": "Democratic Republic of the Congo",
+        "label": "Democratic Republic of the Congo",
+        "count": 8
+      },
+      {
+        "value": "Madagascar",
+        "label": "Madagascar",
+        "count": 8
+      },
+      {
+        "value": "Mozambique",
+        "label": "Mozambique",
+        "count": 8
+      },
+      {
+        "value": "Rwanda",
+        "label": "Rwanda",
+        "count": 8
+      },
+      {
+        "value": "Singapore",
+        "label": "Singapore",
+        "count": 8
+      },
+      {
+        "value": "阿塞拜疆",
+        "label": "阿塞拜疆",
+        "count": 7
+      },
+      {
+        "value": "厄瓜多尔",
+        "label": "厄瓜多尔",
+        "count": 7
+      },
+      {
+        "value": "喀麦隆",
+        "label": "喀麦隆",
+        "count": 7
+      },
+      {
+        "value": "乌拉圭",
+        "label": "乌拉圭",
+        "count": 7
+      },
+      {
+        "value": "Guatemala",
+        "label": "Guatemala",
+        "count": 7
+      },
+      {
+        "value": "Haiti",
+        "label": "Haiti",
+        "count": 7
+      },
+      {
+        "value": "North Macedonia",
+        "label": "North Macedonia",
+        "count": 7
+      },
+      {
+        "value": "Saudi Arabia",
+        "label": "Saudi Arabia",
+        "count": 7
+      },
+      {
+        "value": "Sudan",
+        "label": "Sudan",
+        "count": 7
+      },
+      {
+        "value": "Tunisia",
+        "label": "Tunisia",
+        "count": 7
+      },
+      {
+        "value": "阿富汗",
+        "label": "阿富汗",
+        "count": 6
+      },
+      {
+        "value": "保加利亚",
+        "label": "保加利亚",
+        "count": 6
+      },
+      {
+        "value": "柬埔寨",
+        "label": "柬埔寨",
+        "count": 6
+      },
+      {
+        "value": "尼日利亚",
+        "label": "尼日利亚",
+        "count": 6
+      },
+      {
+        "value": "中非共和国",
+        "label": "中非共和国",
+        "count": 6
+      },
+      {
+        "value": "Cameroon",
+        "label": "Cameroon",
+        "count": 6
+      },
+      {
+        "value": "Costa Rica",
+        "label": "Costa Rica",
+        "count": 6
+      },
+      {
+        "value": "Kyrgyzstan",
+        "label": "Kyrgyzstan",
+        "count": 6
+      },
+      {
+        "value": "Mali",
+        "label": "Mali",
+        "count": 6
+      },
+      {
+        "value": "Nicaragua",
+        "label": "Nicaragua",
+        "count": 6
+      },
+      {
+        "value": "Nigeria",
+        "label": "Nigeria",
+        "count": 6
+      },
+      {
+        "value": "Paraguay",
+        "label": "Paraguay",
+        "count": 6
+      },
+      {
+        "value": "阿联酋",
+        "label": "阿联酋",
+        "count": 5
+      },
+      {
+        "value": "巴基斯坦",
+        "label": "巴基斯坦",
+        "count": 5
+      },
+      {
+        "value": "波斯尼亚和黑塞哥维那",
+        "label": "波斯尼亚和黑塞哥维那",
+        "count": 5
+      },
+      {
+        "value": "卢森堡",
+        "label": "卢森堡",
+        "count": 5
+      },
+      {
+        "value": "沙特阿拉伯",
+        "label": "沙特阿拉伯",
+        "count": 5
+      },
+      {
+        "value": "苏联",
+        "label": "苏联",
+        "count": 5
+      },
+      {
+        "value": "英国（英格兰）",
+        "label": "英国（英格兰）",
+        "count": 5
+      },
+      {
+        "value": "Bolivia",
+        "label": "Bolivia",
+        "count": 5
+      },
+      {
+        "value": "Bosnia and Herzegovina",
+        "label": "Bosnia and Herzegovina",
+        "count": 5
+      },
+      {
+        "value": "Congo",
+        "label": "Congo",
+        "count": 5
+      },
+      {
+        "value": "Democratic Republic of the",
+        "label": "Democratic Republic of the",
+        "count": 5
+      },
+      {
+        "value": "El Salvador",
+        "label": "El Salvador",
+        "count": 5
+      },
+      {
+        "value": "Ghana",
+        "label": "Ghana",
+        "count": 5
+      },
+      {
+        "value": "埃塞俄比亚",
+        "label": "埃塞俄比亚",
+        "count": 4
+      },
+      {
+        "value": "马里",
+        "label": "马里",
+        "count": 4
+      },
+      {
+        "value": "斯洛文尼亚",
+        "label": "斯洛文尼亚",
+        "count": 4
+      },
+      {
+        "value": "伊拉克",
+        "label": "伊拉克",
+        "count": 4
+      },
+      {
+        "value": "Austria–Hungary",
+        "label": "Austria–Hungary",
+        "count": 4
+      },
+      {
+        "value": "Bhutan",
+        "label": "Bhutan",
+        "count": 4
+      },
+      {
+        "value": "Chad",
+        "label": "Chad",
+        "count": 4
+      },
+      {
+        "value": "Ivory Coast",
+        "label": "Ivory Coast",
+        "count": 4
+      },
+      {
+        "value": "Republic of Yugoslavia",
+        "label": "Republic of Yugoslavia",
+        "count": 4
+      },
+      {
+        "value": "Réunion",
+        "label": "Réunion",
+        "count": 4
+      },
+      {
+        "value": "Serbia and Montenegro",
+        "label": "Serbia and Montenegro",
+        "count": 4
+      },
+      {
+        "value": "Sierra Leone",
+        "label": "Sierra Leone",
+        "count": 4
+      },
+      {
+        "value": "Zambia",
+        "label": "Zambia",
+        "count": 4
+      },
+      {
+        "value": "巴拉圭",
+        "label": "巴拉圭",
+        "count": 3
+      },
+      {
+        "value": "白俄罗斯",
+        "label": "白俄罗斯",
+        "count": 3
+      },
+      {
+        "value": "北马其顿",
+        "label": "北马其顿",
+        "count": 3
+      },
+      {
+        "value": "贝宁",
+        "label": "贝宁",
+        "count": 3
+      },
+      {
+        "value": "波黑",
+        "label": "波黑",
+        "count": 3
+      },
+      {
+        "value": "玻利维亚",
+        "label": "玻利维亚",
+        "count": 3
+      },
+      {
+        "value": "哈萨克斯坦",
+        "label": "哈萨克斯坦",
+        "count": 3
+      },
+      {
+        "value": "马达加斯加",
+        "label": "马达加斯加",
+        "count": 3
+      },
+      {
+        "value": "苏丹",
+        "label": "苏丹",
+        "count": 3
+      },
+      {
+        "value": "Angola",
+        "label": "Angola",
+        "count": 3
+      },
+      {
+        "value": "Cyprus",
+        "label": "Cyprus",
+        "count": 3
+      },
+      {
+        "value": "Guinea",
+        "label": "Guinea",
+        "count": 3
+      },
+      {
+        "value": "Honduras",
+        "label": "Honduras",
+        "count": 3
+      },
+      {
+        "value": "Kosovo",
+        "label": "Kosovo",
+        "count": 3
+      },
+      {
+        "value": "Kuwait",
+        "label": "Kuwait",
+        "count": 3
+      },
+      {
+        "value": "Libya",
+        "label": "Libya",
+        "count": 3
+      },
+      {
+        "value": "Mongolia",
+        "label": "Mongolia",
+        "count": 3
+      },
+      {
+        "value": "Northern Ireland",
+        "label": "Northern Ireland",
+        "count": 3
+      },
+      {
+        "value": "Socialist Federal Republic of Yugoslavia",
+        "label": "Socialist Federal Republic of Yugoslavia",
+        "count": 3
+      },
+      {
+        "value": "Sri Lanka",
+        "label": "Sri Lanka",
+        "count": 3
+      },
+      {
+        "value": "Tanzania",
+        "label": "Tanzania",
+        "count": 3
+      },
+      {
+        "value": "West Germany",
+        "label": "West Germany",
+        "count": 3
+      },
+      {
+        "value": "Yemen",
+        "label": "Yemen",
+        "count": 3
+      },
+      {
+        "value": "海地",
+        "label": "海地",
+        "count": 2
+      },
+      {
+        "value": "洪都拉斯",
+        "label": "洪都拉斯",
+        "count": 2
+      },
+      {
+        "value": "捷克斯洛伐克",
+        "label": "捷克斯洛伐克",
+        "count": 2
+      },
+      {
+        "value": "联邦德国",
+        "label": "联邦德国",
+        "count": 2
+      },
+      {
+        "value": "孟加拉国",
+        "label": "孟加拉国",
+        "count": 2
+      },
+      {
+        "value": "莫桑比克",
+        "label": "莫桑比克",
+        "count": 2
+      },
+      {
+        "value": "Bosnia And Herzegovina",
+        "label": "Bosnia And Herzegovina",
+        "count": 2
+      },
+      {
+        "value": "Cape Verde",
+        "label": "Cape Verde",
+        "count": 2
+      },
+      {
+        "value": "Central African Republic",
+        "label": "Central African Republic",
+        "count": 2
+      },
+      {
+        "value": "Comoros",
+        "label": "Comoros",
+        "count": 2
+      },
+      {
+        "value": "Curaçao",
+        "label": "Curaçao",
+        "count": 2
+      },
+      {
+        "value": "Czechia",
+        "label": "Czechia",
+        "count": 2
+      },
+      {
+        "value": "Ethiopia",
+        "label": "Ethiopia",
+        "count": 2
+      },
+      {
+        "value": "French Guiana",
+        "label": "French Guiana",
+        "count": 2
+      },
+      {
+        "value": "Greenland",
+        "label": "Greenland",
+        "count": 2
+      },
+      {
+        "value": "Jamaica",
+        "label": "Jamaica",
+        "count": 2
+      },
+      {
+        "value": "Mauritius",
+        "label": "Mauritius",
+        "count": 2
+      },
+      {
+        "value": "Mongolian People's Republic",
+        "label": "Mongolian People's Republic",
+        "count": 2
+      },
+      {
+        "value": "Namibia",
+        "label": "Namibia",
+        "count": 2
+      },
+      {
+        "value": "Nazi Germany",
+        "label": "Nazi Germany",
+        "count": 2
+      },
+      {
+        "value": "Puerto Rico",
+        "label": "Puerto Rico",
+        "count": 2
+      },
+      {
+        "value": "Reunion",
+        "label": "Reunion",
+        "count": 2
+      },
+      {
+        "value": "Togo",
+        "label": "Togo",
+        "count": 2
+      },
+      {
+        "value": "Uae",
+        "label": "Uae",
+        "count": 2
+      },
+      {
+        "value": "Uganda",
+        "label": "Uganda",
+        "count": 2
+      },
+      {
+        "value": "Uzbekistan",
+        "label": "Uzbekistan",
+        "count": 2
+      },
+      {
+        "value": "巴拿马",
+        "label": "巴拿马",
+        "count": 1
+      },
+      {
+        "value": "德国（当时联邦德国）",
+        "label": "德国（当时联邦德国）",
+        "count": 1
+      },
+      {
+        "value": "德国苏占区",
+        "label": "德国苏占区",
+        "count": 1
+      },
+      {
+        "value": "德意志民主共和国",
+        "label": "德意志民主共和国",
+        "count": 1
+      },
+      {
+        "value": "德意志民主共和国（东德",
+        "label": "德意志民主共和国（东德",
+        "count": 1
+      },
+      {
+        "value": "多哥",
+        "label": "多哥",
+        "count": 1
+      },
+      {
+        "value": "多米尼加共和国",
+        "label": "多米尼加共和国",
+        "count": 1
+      },
+      {
+        "value": "哥斯达黎加",
+        "label": "哥斯达黎加",
+        "count": 1
+      },
+      {
+        "value": "瓜德罗普（法国海外省）",
+        "label": "瓜德罗普（法国海外省）",
+        "count": 1
+      },
+      {
+        "value": "加纳",
+        "label": "加纳",
+        "count": 1
+      },
+      {
+        "value": "加蓬",
+        "label": "加蓬",
+        "count": 1
+      },
+      {
+        "value": "今德国）",
+        "label": "今德国）",
+        "count": 1
+      },
+      {
+        "value": "科索沃地区",
+        "label": "科索沃地区",
+        "count": 1
+      },
+      {
+        "value": "科特迪瓦",
+        "label": "科特迪瓦",
+        "count": 1
+      },
+      {
+        "value": "列支敦士登",
+        "label": "列支敦士登",
+        "count": 1
+      },
+      {
+        "value": "马耳他",
+        "label": "马耳他",
+        "count": 1
+      },
+      {
+        "value": "马来西亚",
+        "label": "马来西亚",
+        "count": 1
+      },
+      {
+        "value": "马绍尔群岛",
+        "label": "马绍尔群岛",
+        "count": 1
+      },
+      {
+        "value": "蒙古",
+        "label": "蒙古",
+        "count": 1
+      },
+      {
+        "value": "蒙古国",
+        "label": "蒙古国",
+        "count": 1
+      },
+      {
+        "value": "摩尔多瓦",
+        "label": "摩尔多瓦",
+        "count": 1
+      },
+      {
+        "value": "南斯拉夫",
+        "label": "南斯拉夫",
+        "count": 1
+      },
+      {
+        "value": "尼泊尔",
+        "label": "尼泊尔",
+        "count": 1
+      },
+      {
+        "value": "尼日尔",
+        "label": "尼日尔",
+        "count": 1
+      },
+      {
+        "value": "萨尔瓦多",
+        "label": "萨尔瓦多",
+        "count": 1
+      },
+      {
+        "value": "斯威士兰",
+        "label": "斯威士兰",
+        "count": 1
+      },
+      {
+        "value": "苏联（拉脱维亚）",
+        "label": "苏联（拉脱维亚）",
+        "count": 1
+      },
+      {
+        "value": "苏联（乌克兰苏维埃社会主义共和国）",
+        "label": "苏联（乌克兰苏维埃社会主义共和国）",
+        "count": 1
+      },
+      {
+        "value": "苏联（亚美尼亚苏维埃社会主义共和国）",
+        "label": "苏联（亚美尼亚苏维埃社会主义共和国）",
+        "count": 1
+      },
+      {
+        "value": "委内瑞拉",
+        "label": "委内瑞拉",
+        "count": 1
+      },
+      {
+        "value": "西撒哈拉地区",
+        "label": "西撒哈拉地区",
+        "count": 1
+      },
+      {
+        "value": "约旦",
+        "label": "约旦",
+        "count": 1
+      },
+      {
+        "value": "乍得",
+        "label": "乍得",
+        "count": 1
+      },
+      {
+        "value": "Barbados",
+        "label": "Barbados",
+        "count": 1
+      },
+      {
+        "value": "Botswana",
+        "label": "Botswana",
+        "count": 1
+      },
+      {
+        "value": "British Hong Kong",
+        "label": "British Hong Kong",
+        "count": 1
+      },
+      {
+        "value": "Burundi",
+        "label": "Burundi",
+        "count": 1
+      },
+      {
+        "value": "Former Yugoslavia",
+        "label": "Former Yugoslavia",
+        "count": 1
+      },
+      {
+        "value": "Gabon",
+        "label": "Gabon",
+        "count": 1
+      },
+      {
+        "value": "Georgian SSR",
+        "label": "Georgian SSR",
+        "count": 1
+      },
+      {
+        "value": "German Empire",
+        "label": "German Empire",
+        "count": 1
+      },
+      {
+        "value": "Guinea-Bissau",
+        "label": "Guinea-Bissau",
+        "count": 1
+      },
+      {
+        "value": "Hong Kong SAR",
+        "label": "Hong Kong SAR",
+        "count": 1
+      },
+      {
+        "value": "Karakalpakstan",
+        "label": "Karakalpakstan",
+        "count": 1
+      },
+      {
+        "value": "Kingdom of Bulgaria",
+        "label": "Kingdom of Bulgaria",
+        "count": 1
+      },
+      {
+        "value": "Kingdom of Yugoslavia",
+        "label": "Kingdom of Yugoslavia",
+        "count": 1
+      },
+      {
+        "value": "Malawi",
+        "label": "Malawi",
+        "count": 1
+      },
+      {
+        "value": "Malta",
+        "label": "Malta",
+        "count": 1
+      },
+      {
+        "value": "Mandatory Palestine",
+        "label": "Mandatory Palestine",
+        "count": 1
+      },
+      {
+        "value": "Mauritania",
+        "label": "Mauritania",
+        "count": 1
+      },
+      {
+        "value": "Moldova",
+        "label": "Moldova",
+        "count": 1
+      },
+      {
+        "value": "Myanmar",
+        "label": "Myanmar",
+        "count": 1
+      },
+      {
+        "value": "Ottoman Empire",
+        "label": "Ottoman Empire",
+        "count": 1
+      },
+      {
+        "value": "People's Republic of Bulgaria",
+        "label": "People's Republic of Bulgaria",
+        "count": 1
+      },
+      {
+        "value": "Romanian People's Republic",
+        "label": "Romanian People's Republic",
+        "count": 1
+      },
+      {
+        "value": "Russian Empire",
+        "label": "Russian Empire",
+        "count": 1
+      },
+      {
+        "value": "Russian Soviet Federative Socialist Republic",
+        "label": "Russian Soviet Federative Socialist Republic",
+        "count": 1
+      },
+      {
+        "value": "Somalia",
+        "label": "Somalia",
+        "count": 1
+      },
+      {
+        "value": "State of Palestine",
+        "label": "State of Palestine",
+        "count": 1
+      },
+      {
+        "value": "The Bahamas",
+        "label": "The Bahamas",
+        "count": 1
+      },
+      {
+        "value": "Tiflis Governorate",
+        "label": "Tiflis Governorate",
+        "count": 1
+      },
+      {
+        "value": "Timor-Leste",
+        "label": "Timor-Leste",
+        "count": 1
+      },
+      {
+        "value": "Weimar Republic",
+        "label": "Weimar Republic",
+        "count": 1
+      },
+      {
+        "value": "YU",
+        "label": "YU",
+        "count": 1
+      },
+      {
+        "value": "Yugoslavia YU",
+        "label": "Yugoslavia YU",
+        "count": 1
+      }
+    ],
+    "region": [
+      {
+        "value": "待核",
+        "label": "待核",
+        "count": 13330
+      },
+      {
+        "value": "欧洲",
+        "label": "欧洲",
+        "count": 4253
+      },
+      {
+        "value": "北美洲",
+        "label": "北美洲",
+        "count": 1416
+      },
+      {
+        "value": "亚洲",
+        "label": "亚洲",
+        "count": 737
+      },
+      {
+        "value": "美洲",
+        "label": "美洲",
+        "count": 309
+      },
+      {
+        "value": "拉丁美洲",
+        "label": "拉丁美洲",
+        "count": 268
+      },
+      {
+        "value": "跨地区",
+        "label": "跨地区",
+        "count": 247
+      },
+      {
+        "value": "中国",
+        "label": "中国",
+        "count": 234
+      },
+      {
+        "value": "非洲",
+        "label": "非洲",
+        "count": 167
+      },
+      {
+        "value": "大洋洲",
+        "label": "大洋洲",
+        "count": 117
+      },
+      {
+        "value": "东亚",
+        "label": "东亚",
+        "count": 116
+      },
+      {
+        "value": "西亚",
+        "label": "西亚",
+        "count": 62
+      },
+      {
+        "value": "南美洲",
+        "label": "南美洲",
+        "count": 59
+      },
+      {
+        "value": "东南亚",
+        "label": "东南亚",
+        "count": 47
+      },
+      {
+        "value": "南亚",
+        "label": "南亚",
+        "count": 36
+      },
+      {
+        "value": "中国大陆",
+        "label": "中国大陆",
+        "count": 18
+      },
+      {
+        "value": "中国台湾",
+        "label": "中国台湾",
+        "count": 6
+      },
+      {
+        "value": "中国香港",
+        "label": "中国香港",
+        "count": 3
+      },
+      {
+        "value": "欧亚",
+        "label": "欧亚",
+        "count": 1
+      }
+    ],
+    "category": [
+      {
+        "value": "unverified",
+        "label": "题材待核",
+        "count": 16119
+      },
+      {
+        "value": "arts",
+        "label": "艺术与媒介",
+        "count": 1306
+      },
+      {
+        "value": "family",
+        "label": "家庭与代际",
+        "count": 906
+      },
+      {
+        "value": "history",
+        "label": "历史与记忆",
+        "count": 819
+      },
+      {
+        "value": "society",
+        "label": "政治与公共生活",
+        "count": 588
+      },
+      {
+        "value": "place",
+        "label": "城市与社区",
+        "count": 455
+      },
+      {
+        "value": "nature",
+        "label": "生态与自然",
+        "count": 453
+      },
+      {
+        "value": "war",
+        "label": "战争与冲突",
+        "count": 428
+      },
+      {
+        "value": "work",
+        "label": "劳动与经济",
+        "count": 422
+      },
+      {
+        "value": "migration",
+        "label": "迁徙与身份",
+        "count": 390
+      },
+      {
+        "value": "education",
+        "label": "教育与成长",
+        "count": 276
+      },
+      {
+        "value": "health",
+        "label": "健康与身体",
+        "count": 138
+      },
+      {
+        "value": "belief",
+        "label": "信仰与文化",
+        "count": 71
+      },
+      {
+        "value": "sports",
+        "label": "体育与运动",
+        "count": 64
+      },
+      {
+        "value": "science",
+        "label": "科学与技术",
+        "count": 60
+      }
+    ],
+    "decades": [
+      {
+        "value": "1890",
+        "label": "1890 年代",
+        "count": 40
+      },
+      {
+        "value": "1900",
+        "label": "1900 年代",
+        "count": 22
+      },
+      {
+        "value": "1910",
+        "label": "1910 年代",
+        "count": 37
+      },
+      {
+        "value": "1920",
+        "label": "1920 年代",
+        "count": 71
+      },
+      {
+        "value": "1930",
+        "label": "1930 年代",
+        "count": 142
+      },
+      {
+        "value": "1940",
+        "label": "1940 年代",
+        "count": 344
+      },
+      {
+        "value": "1950",
+        "label": "1950 年代",
+        "count": 407
+      },
+      {
+        "value": "1960",
+        "label": "1960 年代",
+        "count": 702
+      },
+      {
+        "value": "1970",
+        "label": "1970 年代",
+        "count": 937
+      },
+      {
+        "value": "1980",
+        "label": "1980 年代",
+        "count": 1058
+      },
+      {
+        "value": "1990",
+        "label": "1990 年代",
+        "count": 1944
+      },
+      {
+        "value": "2000",
+        "label": "2000 年代",
+        "count": 4976
+      },
+      {
+        "value": "2010",
+        "label": "2010 年代",
+        "count": 7438
+      },
+      {
+        "value": "2020",
+        "label": "2020 年代",
+        "count": 2415
+      }
+    ]
+  },
+  "countedAt": "2026-11-24T05:12:56.184Z",
+  "mirrored_films": 20533
+}
